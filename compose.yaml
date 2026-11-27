@@ -1,0 +1,10 @@
+services:
+  aiforge:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile
+    image: aiforge:0.1.1
+    container_name: aiforge
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
